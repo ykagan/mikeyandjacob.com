@@ -1,0 +1,336 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    
+    <head>
+        <link rel="shortcut icon" href="https://ssl.gstatic.com/docs/spreadsheets/forms/favicon_jfk2.png"
+        type="image/x-icon" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <title>RSVP to Michael &amp; Jacob&#39;s wedding</title>
+        <link href="https://docs.google.com/static/spreadsheets/client/css/779923916-published_form_compiled.css"
+        type="text/css" rel="stylesheet" />
+        <link href="/css/rsvp.css" type="text/css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    </head>
+    
+    <body class="ss-base-body" dir="ltr" itemscope itemtype="http://schema.org/CreativeWork/FormObject">
+        <meta itemprop="name" content="RSVP to Michael &amp; Jacob's wedding"
+        />
+        <meta itemprop="description" content="Please enter your name and your significant other is applicable."
+        />
+        <meta itemprop="embedUrl" content="https://docs.google.com/spreadsheet/embeddedform?formkey=dGp0TXhWRlJ4UTFaQy1DZVBxRXpPWXc6MQ"
+        />
+        <meta itemprop="faviconUrl" content="http://ssl.gstatic.com/docs/spreadsheets/forms/favicon_jfk2.png"
+        />
+        <div class="ss-form-container">
+            <div class="ss-form-heading">
+                <div class="header"></div>
+                <h1 class="ss-form-title">RSVP to Michael &amp; Jacob&#39;s Celebration</h1>
+                <p></p>
+                <div id="passDiv" class="ss-form-desc">
+                    <label class="ss-q-title" for="entry_3">Please enter your secret key:</label>
+                    <input type="text" name="passkey"
+                    value="" id="txtPassKey" />
+                </div>
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                        var key = getQueryString()["code"];
+                        var plus1 = getQueryString()["plus1"] == 1;
+
+                        if (!plus1) {
+                            $("#guestYes").hide();
+                        }
+                        else {
+                            $("#guestRequest").hide();
+                            $("#helpGuest").hide();
+                        }
+
+                        //$('#txtPassKey').keyup(function(){
+                        var pass = key; // $(this).val();
+                        var key1 = 'mJw';
+                        var key2 = 'W^&';
+                        var name = decodeBase64(pass);
+                        if (name.substring(0, 3) === key1 && name.indexOf(key2) != -1) {
+                            name = name.replace(key1, '').replace(key2, '');
+                            $('#entry_0').val(name);
+
+                            //$('.ss-form').removeClass('hidden');
+                            $('.ss-form').removeClass('hidden').hide().slideDown(2000)
+                            $('#invalidKey').slideUp(); //addClass('hidden');
+                            $('#txtPassKey').unbind('keyup');
+                            $('#passDiv').slideUp();
+
+                        }
+                        else {
+                            $('.ss-form').addClass('hidden');
+                            $('#invalidKey').removeClass('hidden');
+                        }
+                        //});
+                    });
+                </script>
+            </div>
+            <div id="invalidKey" class="ss-required-asterisk hidden">Invalid Key</div>
+            <div class="ss-form hidden">
+                <hr class="ss-email-break" style="display:none;" />
+                <form action="https://docs.google.com/spreadsheet/formResponse?formkey=dGp0TXhWRlJ4UTFaQy1DZVBxRXpPWXc6MQ&amp;theme=0AX42CRMsmRFbUy1mM2MxMmQxMi1kNWM3LTQzNDEtOTVhZS1lNGNmZjk1N2Q5MzY&amp;ifq"
+                method="POST" id="ss-form">
+                    <br>
+                    <div class="errorbox-good">
+                        <div class="ss-item ss-item-required ss-radio">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-title" for="entry_3">I will be attending the wedding celebration
+                                    <span class="ss-required-asterisk">*</span>
+                                </label>
+                                <label class="ss-q-help" for="entry_3"></label>
+                                <ul class="ss-choices">
+                                    <li class="ss-choice-item">
+                                        <label class="ss-choice-label">
+                                            <input type="radio" name="entry.3.group" value="Yes" class="ss-q-radio"
+                                            id="group_3_1" checked="checked">Yes</label>
+                                    </li>
+                                    <li class="ss-choice-item">
+                                        <label class="ss-choice-label">
+                                            <input type="radio" name="entry.3.group" value="No" class="ss-q-radio"
+                                            id="group_3_2">No</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="errorbox-good">
+                        <div class="ss-item ss-item-required ss-text">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-title" for="entry_0">Please enter the name you would like to be referred to as:
+                                    <span class="ss-required-asterisk">*</span>
+                                </label>
+                                <label class="ss-q-help" for="entry_0"></label>
+                                <input type="text" name="entry.0.single" value="" class="ss-q-short"
+                                id="entry_0">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="errorbox-good">
+                        <div class="ss-item ss-item-required ss-radio">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-title" for="entry_1">I am bringing a second guest to the event:
+                                    <span class="ss-required-asterisk">*</span>
+                                </label>
+                                <label class="ss-q-help" for="entry_1" id="helpGuest">Note: Due to limited seating capacity, we unfortunately cannot let everyone
+                                    invite another guest. If you would like to bring someone, please check
+                                    Request Permission and we will get back to you.</label>
+                                <ul class="ss-choices">
+                                    <li class="ss-choice-item" id="guestYes">
+                                        <label class="ss-choice-label">
+                                            <input type="radio" name="entry.1.group" value="Yes" class="ss-q-radio"
+                                            id="group_1_1">Yes</label>
+                                    </li>
+                                    <li class="ss-choice-item">
+                                        <label class="ss-choice-label">
+                                            <input type="radio" name="entry.1.group" checked="" value="No" class="ss-q-radio"
+                                            id="group_1_2">No</label>
+                                    </li>
+                                    <li class="ss-choice-item">
+                                        <label class="ss-choice-label" id="guestRequest">
+                                            <input type="radio" name="entry.1.group" value="Request Permission" class="ss-q-radio"
+                                            id="group_1_3">Request Permission</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="errorbox-good">
+                        <div class="ss-item  ss-text">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-title" for="entry_2">Name of your guest:</label>
+                                <label class="ss-q-help" for="entry_2"></label>
+                                <input type="text" name="entry.2.single" value="" class="ss-q-short"
+                                id="entry_2">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="errorbox-good">
+                        <div class="ss-item  ss-paragraph-text">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-title" for="entry_4">Are you a vegetarian and do you have any food allergies or other dietary
+                                    restrictions:</label>
+                                <label class="ss-q-help" for="entry_4"></label>
+                                <textarea name="entry.4.single" rows="8" cols="75" class="ss-q-long"
+                                id="entry_4"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="errorbox-good">
+                        <div class="ss-item  ss-text">
+                            <div class="ss-form-entry">
+                                <label class="ss-q-title" for="entry_6">What is your favorite song?</label>
+                                <label class="ss-q-help" for="entry_6"></label>
+                                <input type="text" name="entry.6.single" value="" class="ss-q-short"
+                                id="entry_6">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <input type="hidden" name="pageNumber" value="0">
+                    <input type="hidden" name="backupCache" value="">
+                    <div class="ss-item ss-navigate">
+                        <div class="ss-form-entry">
+                            <input type="button" name="submit" value="Submit" id="btnSubmit">
+                        </div>
+                    </div>
+                </form>
+                <script type="text/javascript">
+                    $(".btnSubmit").click(function(){
+                        $("form#ss-form").submit();
+                    });
+                    
+                </script>
+                <script type="text/javascript">
+                    var END_OF_INPUT = -1;
+
+                    var base64Chars = new Array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '+', '/');
+
+                    var reverseBase64Chars = new Array();
+                    for (var i = 0; i < base64Chars.length; i++) {
+                        reverseBase64Chars[base64Chars[i]] = i;
+                    }
+
+                    (function() {
+                        var divs = document.getElementById('ss-form').
+                        getElementsByTagName('div');
+                        var numDivs = divs.length;
+                        for (var j = 0; j < numDivs; j++) {
+                            if (divs[j].className == 'errorbox-bad') {
+                                divs[j].lastChild.firstChild.lastChild.focus();
+                                return;
+                            }
+                        }
+                        for (var i = 0; i < numDivs; i++) {
+                            var div = divs[i];
+                            if (div.className == 'ss-form-entry' && div.firstChild && div.firstChild.className == 'ss-q-title') {
+                                div.lastChild.focus();
+                                return;
+                            }
+                        }
+                    })();
+                </script>
+                <script type="text/javascript">
+                    var base64Str;
+                    var base64Count;
+
+                    function setBase64Str(str) {
+                        base64Str = str;
+                        base64Count = 0;
+                    }
+
+                    function readBase64() {
+                        if (!base64Str) return END_OF_INPUT;
+                        if (base64Count >= base64Str.length) return END_OF_INPUT;
+                        var c = base64Str.charCodeAt(base64Count) & 0xff;
+                        base64Count++;
+                        return c;
+                    }
+
+                    function encodeBase64(str) {
+                        setBase64Str(str);
+                        var result = '';
+                        var inBuffer = new Array(3);
+                        var lineCount = 0;
+                        var done = false;
+                        while (!done && (inBuffer[0] = readBase64()) != END_OF_INPUT) {
+                            inBuffer[1] = readBase64();
+                            inBuffer[2] = readBase64();
+                            result += (base64Chars[inBuffer[0] >> 2]);
+                            if (inBuffer[1] != END_OF_INPUT) {
+                                result += (base64Chars[((inBuffer[0] << 4) & 0x30) | (inBuffer[1] >> 4)]);
+                                if (inBuffer[2] != END_OF_INPUT) {
+                                    result += (base64Chars[((inBuffer[1] << 2) & 0x3c) | (inBuffer[2] >> 6)]);
+                                    result += (base64Chars[inBuffer[2] & 0x3F]);
+                                }
+                                else {
+                                    result += (base64Chars[((inBuffer[1] << 2) & 0x3c)]);
+                                    result += ('=');
+                                    done = true;
+                                }
+                            }
+                            else {
+                                result += (base64Chars[((inBuffer[0] << 4) & 0x30)]);
+                                result += ('=');
+                                result += ('=');
+                                done = true;
+                            }
+                            lineCount += 4;
+                            if (lineCount >= 76) {
+                                result += ('\n');
+                                lineCount = 0;
+                            }
+                        }
+                        return result;
+                    }
+
+                    function readReverseBase64() {
+                        if (!base64Str) return END_OF_INPUT;
+                        while (true) {
+                            if (base64Count >= base64Str.length) return END_OF_INPUT;
+                            var nextCharacter = base64Str.charAt(base64Count);
+                            base64Count++;
+                            if (reverseBase64Chars[nextCharacter]) {
+                                return reverseBase64Chars[nextCharacter];
+                            }
+                            if (nextCharacter == 'A') return 0;
+                        }
+                        return END_OF_INPUT;
+                    }
+
+                    function ntos(n) {
+                        n = n.toString(16);
+                        if (n.length == 1) n = "0" + n;
+                        n = "%" + n;
+                        return unescape(n);
+                    }
+
+                    function decodeBase64(str) {
+                        setBase64Str(str);
+                        var result = "";
+                        var inBuffer = new Array(4);
+                        var done = false;
+                        while (!done && (inBuffer[0] = readReverseBase64()) != END_OF_INPUT && (inBuffer[1] = readReverseBase64()) != END_OF_INPUT) {
+                            inBuffer[2] = readReverseBase64();
+                            inBuffer[3] = readReverseBase64();
+                            result += ntos((((inBuffer[0] << 2) & 0xff) | inBuffer[1] >> 4));
+                            if (inBuffer[2] != END_OF_INPUT) {
+                                result += ntos((((inBuffer[1] << 4) & 0xff) | inBuffer[2] >> 2));
+                                if (inBuffer[3] != END_OF_INPUT) {
+                                    result += ntos((((inBuffer[2] << 6) & 0xff) | inBuffer[3]));
+                                }
+                                else {
+                                    done = true;
+                                }
+                            }
+                            else {
+                                done = true;
+                            }
+                        }
+                        return result;
+                    }
+
+                    function getQueryString() {
+                        var result = {}, queryString = location.search.substring(1),
+                            re = /([^&=]+)=([^&]*)/g,
+                            m;
+
+                        while (m = re.exec(queryString)) {
+                            result[decodeURIComponent(m[1])] = decodeURIComponent(m[2]);
+                        }
+
+                        return result;
+                    }
+                </script>
+            </div>
+        </div>
+    </body>
+
+</html>
